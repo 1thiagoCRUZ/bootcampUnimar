@@ -22,3 +22,4 @@ const body = document.querySelector("body"),
             modeText.innerText = "Dark Mode"
         }
       });
+
