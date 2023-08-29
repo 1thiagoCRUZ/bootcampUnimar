@@ -99,7 +99,7 @@
         </div>
     </nav>
 
-    <section class="home">
+   
         <style>
         .swiper {
       width: 100%;
@@ -109,7 +109,7 @@
     .swiper-slide {
       text-align: center;
       font-size: 18px;
-      background: #fff;
+      background: rgb(226, 2, 2);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -128,39 +128,48 @@
       margin: 20px auto;
     }
 
-    .append-buttons {
-      text-align: center;
-      margin-top: 20px;
+    .swiper-navBtn {
+      color: black;
+      height: 40px;
+      width: 40px;
+      background: white;
+      border-radius: 50%;
     }
 
-    .append-buttons button {
-      display: inline-block;
-      cursor: pointer;
-      border: 1px solid #007aff;
-      color: #007aff;
-      text-decoration: none;
-      padding: 4px 10px;
-      border-radius: 4px;
-      margin: 0 10px;
-      font-size: 13px;
+    .swiper-navBtn::before, 
+    .swiper-navBtn::after {
+      font-size: 18px;
+      font-weight: 700;
     }
+
+    .swiper-pagination-bullet {
+      background-color: #000;
+    }
+   
   </style>
-</head>
-
-<body>
+<section class="home">
+  <div class="welcome-text">
+    <h3>Seja bem-vindo à nossa Biblioteca Digital</h3>
+  </div>
   <!-- Swiper -->
 
+  <div class="container-dois">
   <div #swiperRef="" class="swiper mySwiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">Slide 1</div>
       <div class="swiper-slide">Slide 2</div>
       <div class="swiper-slide">Slide 3</div>
       <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide">Slide 5</div>
+      <div class="swiper-slide">Slide 6</div>
+      <div class="swiper-slide">Slide 7</div>
+      <div class="swiper-slide">Slide 8</div>
     </div>
+
+    <div class="swiper-button-next swiper-navBtn"></div>
+    <div class="swiper-button-prev swiper-navBtn"></div>
     <div class="swiper-pagination"></div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-pagination"></div>
+  </div>
   </div>
 
 
@@ -174,19 +183,49 @@
       slidesPerView: 4,
       centeredSlides: true,
       spaceBetween: 30,
+      grabCursor: "true",
+      fade: "true",
+      loop: "true",
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
-    
+        dynamicBullets: true,
       },
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
+
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        520: {
+          slidesPerView: 2,
+        },
+        768: {
+          slidesPerView: 3,
+        },
+        1000: {
+          slidesPerView: 4,
+        },
+      }
     });
 
 
   </script>
+
+  <section class="banner-bg">
+      <span class="banner-unimar">
+    <div class="image-banner">
+      <img src="img/cardUnimar.jpg" alt="">
+    </div>
+    <div class="image-banner">
+      <img src="img/bannerlendo.jpg" alt="" id="img-banner-bg">
+    </div>
+  </span>
+  </section>
+
     </section>
 
     

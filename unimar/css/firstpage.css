@@ -292,3 +292,26 @@ body.dark .switch::before {
     min-height: 100vh;
 }
 
+.container-dois {
+    max-width: 1430px;
+    width: 100%;
+    padding: 30px 0;
+}
+
+.banner-bg {
+    max-width: 1430px;
+}
+
+.banner-unimar {
+    display: flex;
+}
+
+.banner-unimar img {
+    height: 475px;
+    width: 715px;
+}
+
+#img-banner-bg {
+    background-blend-mode: var(--black);
+}
+
