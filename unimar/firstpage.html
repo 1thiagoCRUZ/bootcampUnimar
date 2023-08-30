@@ -101,31 +101,28 @@
 
    
         <style>
-        .swiper {
-      width: 100%;
-      height: 100%;
-    }
 
     .swiper-slide {
       text-align: center;
       font-size: 18px;
       background: rgb(255, 255, 255);
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+
       align-items: center;
-      border-radius: 8px;
+      border-radius: 0  0 8px 8px;
     }
 
     .swiper-slide img {
-      display: block;
       width: 100%;
-      height: 100%;
+      display: block;
+      height: 480px;
       object-fit: cover;
     }
 
     .swiper {
-      width: 100%;
-      height: 300px;
+      width: 85%;
+      height: 560px;
       margin: 20px auto;
     }
 
@@ -147,10 +144,15 @@
       background-color: #000;
     }
 
-    .img-slider {
-      border-radius: 8px;
+    .swiper h1 {
+      font-size: 1.2rem;
     }
-   
+
+    .swiper h2 {
+      font-size: 0.9rem;
+      color: gray;
+    }
+
   </style>
 <section class="home">
   <div class="welcome-text">
@@ -162,15 +164,69 @@
   <div #swiperRef="" class="swiper mySwiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <img src="img/unilogo.png" alt="" class="img-slider">
+        <img src="img/books-names/book-name1.webp" class="img-slider" alt="">
+        <div>
+          <h1>Titulo</h1>
+          <h2>Descrição</h2>
+        </div>
       </div>
-      <div class="swiper-slide"> <img src="img/unilogo.png" alt="" class="img-slider"></div>
-      <div class="swiper-slide"> <img src="img/unilogo.png" alt="" class="img-slider"></div>
-      <div class="swiper-slide"> <img src="img/unilogo.png" alt="" class="img-slider"></div>
-      <div class="swiper-slide"> <img src="img/unilogo.png" alt="" class="img-slider"></div>
-      <div class="swiper-slide"> <img src="img/unilogo.png" alt="" class="img-slider"></div>
-      <div class="swiper-slide"> <img src="img/unilogo.png" alt="" class="img-slider"></div>
-      <div class="swiper-slide"> <img src="img/unilogo.png" alt="" class="img-slider"></div>
+
+      <div class="swiper-slide">
+        <img src="img/books-names/book-name2.jfif" alt="">
+        <div>
+          <h1>Titulo</h1>
+          <h2>Descrição</h2>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <img src="img/books-names/book-name3.jpg" alt="">
+        <div>
+          <h1>Titulo</h1>
+          <h2>Descrição</h2>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <img src="img/books-names/book-name5.jpg" alt="">
+        <div>
+          <h1>Titulo</h1>
+          <h2>Descrição</h2>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <img src="img/books-names/book-name6.jpg" alt="">
+        <div>
+          <h1>Titulo</h1>
+          <h2>Descrição</h2>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <img src="img/books-names/book-name7.jpg" alt="">
+        <div>
+          <h1>Titulo</h1>
+          <h2>Descrição</h2>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <img src="img/books-names/book-name8.jpg" alt="">
+        <div>
+          <h1>Titulo</h1>
+          <h2>Descrição</h2>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <img src="img/books-names/book-name9.jfif" alt="">
+        <div>
+          <h1>Titulo</h1>
+          <h2>Descrição</h2>
+        </div>
+      </div>
+
     </div>
 
     <div class="swiper-button-next swiper-navBtn"></div>
@@ -221,26 +277,26 @@
 
 
   </script>
-
+<center>
   <div class="box">
     <div class="inner-box">
       <div class="forms-wrap">
-        
+        <!-- <img src="img/unibg.jpg" alt=""> -->
       </div>
 
       <div class="carousel">
         <div class="images-wrapper">
-          <img src="img/book1.jpg" class="image img-1 show" alt="">
-          <img src="img/cardUnimar.jpg" class="image img-2" alt="">
-          <img src="img/unibg.jpg" class="image img-3" alt="">
+          <img src="img/booktransition1.jpg" class="image img-1 show" alt="">
+          <img src="img/booktransition2.jpg" class="image img-2" alt="">
+          <img src="img/booktransition3.jpg" class="image img-3" alt="">
         </div>
 
         <div class="text-slider">
           <div class="text-wrap">
             <div class="text-group">
-              <h2>“Um livro é um brinquedo feito com letras. Ler é brincar.”</h2>
-              <h2>“Caminhais em direção da solidão. Eu, não, eu tenho os livros.”</h2>
-              <h2>“A leitura é uma conversação com os homens mais ilustres dos séculos passados.”</h2>
+              <h2>Ler</h2>
+              <h2>é</h2>
+              <h2>um hábito.</h2>
             </div>
           </div>
 
@@ -253,9 +309,8 @@
       </div>
     </div>
   </div>
+  </center>
   </section>
-
-    </section>
 
     
     <script src="js/sidebar.js"></script>

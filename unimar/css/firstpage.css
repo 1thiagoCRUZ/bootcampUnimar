@@ -114,10 +114,12 @@ header .image-text .header-text {
 
 .header-text .name {
     font-weight: 600;
+    margin-left: 10px;
 }
 
 .header-text .profession {
     margin-top: -2px;
+    margin-left: 10px;
 }
 
 .sidebar header .toggle {
@@ -296,21 +298,21 @@ body.dark .switch::before {
     max-width: 1700px;
     width: 100%;
     padding: 30px 0;
+
 }
 
 .box {
     position: relative;
-    max-width: 1700px;
-    height: 600px;
+    max-width: 85%;
+    height: 500px;
     background-color: transparent;
-    border-radius: 2.2rem;
     width: 100%;
 }
 
 .inner-box {
     position: absolute;
-    width: calc(100% - 2.1rem);
-    height: calc(100% - 2.1rem);
+    width: 100%;
+    height: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -319,25 +321,31 @@ body.dark .switch::before {
 .forms-wrap {
     position: absolute;
     height: 100%;
-    width: 45%;
+    width: 55%;
     top: 0;
     left: 0;
+    border-radius: 10px 0 0  10px;
     background-color: #0072bc;
-    border-radius: 2.2rem 0 0  2.2rem;
 }
 
+.forms-wrap img {
+    width: 100%;
+    height: 596px;
+    border-radius: 10px 0 0  10px;
+    background-size: cover;
+}
 
 .carousel {
     position: absolute;
     height: 100%;
-    width: 55%;
-    left: 45%;
+    width: 43%;
+    left: 55%;
     top: 0;
     background-color: #fff;
     display: grid;
     grid-template-rows: auto 1fr;
     padding-bottom: 2rem;
-    border-radius:  0 2.2rem 2.2rem 0 ;
+    border-radius:  0 10px 10px 0 ;
     overflow: hidden;
     transition:  0.8s ease-in-out;
     padding-top: 4rem;
