@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Digital - Novidades</title>
+
+    <link rel="stylesheet" href="css/firstpage.css">
+    <link rel="stylesheet" href="css/novidades.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css">
+
+    <!-- CSS do Swiper -->
+    <link rel="stylesheet" href="css/cdn.jsdelivr.net_npm_swiper@10.2.0_swiper-bundle.min.css ">
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image-logo">
+                    <img src="img/unilogo.png" alt="Logo">
+                </span>
+                <div class="text header-text">
+                    <span class="name">
+                        Unimar
+                    </span>
+                    <span class="profession">Biblioteca Digital</span>
+                </div>
+            </div>
+
+            <i class="bx bx-chevron-right toggle"></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <li class="search-box">
+                    
+                        <i class="bx bx-search icon"></i>
+                        <input type="text" placeholder="Pesquise...">
+                  
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class="bx bx-home-alt icon"></i>
+                            <span class="text nav-text">Início</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class="bx bx-book icon"></i>
+                            <span class="text nav-text">Meus Livros</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="novidades.html">
+                            <i class="bx bx-book-open icon"></i>
+                            <span class="text nav-text">Novidades</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class="bx bx-cart icon"></i>
+                            <span class="text nav-text">Carrinho</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="#">
+                        <i class="bx bx-log-out icon"></i>
+                        <span class="text nav-text">Sair</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="moon-sun">
+                        <i class="bx bx-moon icon moon"></i>
+                        <i class="bx bx-sun icon sun"></i>
+                    </div>
+                    <span class="mode-text text">Modo Escuro</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch">
+
+                        </span>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+    <style>
+
+        .swiper-slide {
+          text-align: center;
+          font-size: 18px;
+          background: red;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+    
+        .swiper-slide img {
+          width: 100%;
+          display: block;
+          height: 480px;
+          object-fit: cover;
+        }
+    
+        .swiper {
+          width: 45%;
+          height: 300px;
+          margin: 20px auto;
+        }
+    
+        .swiper-navBtn {
+          color: black;
+          height: 40px;
+          width: 40px;
+          background: white;
+          border-radius: 50%;
+        }
+    
+        .swiper-navBtn::before, 
+        .swiper-navBtn::after {
+          font-size: 18px;
+          font-weight: 700;
+        }
+    
+        .swiper-pagination-bullet {
+          background-color: #000;
+        }
+    
+        .swiper h1 {
+          font-size: 1rem;
+        }
+    
+        .swiper h2 {
+          font-size: 0.9rem;
+          color: gray;
+          text-align: start;
+        }
+    
+        .detail-box {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          padding: 10px 10px;
+          align-items: center;
+          box-sizing: border-box;
+        }
+    
+        .type {
+          display: flex;
+          flex-direction: column;
+        }
+    
+        .type a {
+          color: #222222;
+          margin: 5px 0;
+          font-weight: 700;
+          letter-spacing: 0.5px;
+          padding-right: 8px;
+          text-decoration: none;
+        }
+    
+    
+        .overlay {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+    
+          align-items: center;
+        }
+    
+        .buy-btn {
+          width: 160px;
+          height: 40px;
+          justify-content: center;
+          align-items: center;
+          display: flex;
+          background-color: #ffffff;
+          color: #003264;
+          font-weight: 700;
+          letter-spacing: 1px;
+          text-decoration: none;
+          border-radius: 20px;
+          box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+        }
+    
+        .buy-btn:hover {
+          color: #ffffff;
+          background-color: #f15fa3;
+          transition: all ease 0.3s;
+        }
+    
+        .overlay {
+          visibility: hidden;
+        }
+    
+        .swiper-slide:hover .overlay {
+          visibility: visible;
+        }
+      </style>
+
+
+    <section class="home">
+        
+        <!-- Swiper -->
+      
+        <div class="container-dois">
+            <div class="welcome-text">
+                <h1>Postados Recentemente</h1>
+            </div>
+        <div #swiperRef="" class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+            </div>
+      
+            <div class="swiper-slide">      
+            </div>
+      
+            <div class="swiper-slide">
+            </div>
+      
+            <div class="swiper-slide">
+            </div>
+
+            
+            <div class="swiper-slide">
+            </div>
+
+            <div class="swiper-slide">
+            </div>
+
+            <div class="swiper-slide">
+            </div>
+      
+            <div class="swiper-slide">      
+            </div>
+      
+            <div class="swiper-slide">
+            </div>
+      
+            <div class="swiper-slide">
+            </div>
+          </div>
+      
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+        </div>
+        <br>
+        <br>
+
+        
+        <!-- Swiper -->
+      
+        <div class="container-dois">
+            <div class="welcome-text">
+            <h1>O Melhor da Literatura Brasileira</h1>
+        </div>
+        <div #swiperRef="" class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+            </div>
+
+            <div class="swiper-slide">
+            </div>
+
+            <div class="swiper-slide">
+            </div>
+
+            <div class="swiper-slide">
+            </div>
+
+            <div class="swiper-slide">
+            </div>
+
+            <div class="swiper-slide">
+            </div>
+
+            <div class="swiper-slide">
+            </div>
+
+            <div class="swiper-slide">
+            </div>
+      
+            <div class="swiper-slide">      
+            </div>
+      
+            <div class="swiper-slide">
+            </div>
+      
+            <div class="swiper-slide">
+            </div>
+          </div>
+      
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+        </div>
+
+        <br>
+        <br>
+        <!-- Swiper -->
+      
+        <div class="container-dois"> 
+            
+            <div class="welcome-text">
+            <h1>Universitários e Acadêmicos</h1>
+        </div>
+
+        <div #swiperRef="" class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+            </div>
+      
+            <div class="swiper-slide">      
+            </div>
+      
+            <div class="swiper-slide">
+            </div>
+      
+            <div class="swiper-slide">
+            </div>
+
+            
+            <div class="swiper-slide">
+            </div>
+
+            <div class="swiper-slide">
+            </div>
+
+            <div class="swiper-slide">
+            </div>
+      
+            <div class="swiper-slide">      
+            </div>
+      
+            <div class="swiper-slide">
+            </div>
+      
+            <div class="swiper-slide">
+            </div>
+          </div>
+      
+          <div class="swiper-button-next swiper-navBtn"></div>
+          <div class="swiper-button-prev swiper-navBtn"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+        </div>
+
+        <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 4,
+      centeredSlides: true,
+      spaceBetween: 30,
+      grabCursor: "true",
+      fade: "true",
+      loop: "true",
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        dynamicBullets: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        520: {
+          slidesPerView: 2,
+        },
+        768: {
+          slidesPerView: 3,
+        },
+        1000: {
+          slidesPerView: 4,
+        },
+      }
+    });
+
+
+  </script>
+    </section>      
+
+
+
+
+    <script src="js/sidebar.js"></script>
+</body>
+</html>
