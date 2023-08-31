@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Qwitcher+Grypen:wght@700&family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap');
+
+
 *{
     padding: 0;
     margin: 0;
@@ -321,11 +325,11 @@ body.dark .switch::before {
 .forms-wrap {
     position: absolute;
     height: 100%;
-    width: 55%;
+    width: 60%;
     top: 0;
     left: 0;
     border-radius: 10px 0 0  10px;
-    background-color: #0072bc;
+    background-image: url(../img/banner-pessoas-lendo.png);
 }
 
 .forms-wrap img {
@@ -338,10 +342,9 @@ body.dark .switch::before {
 .carousel {
     position: absolute;
     height: 100%;
-    width: 43%;
-    left: 55%;
+    width: 40%;
+    left: 60%;
     top: 0;
-    background-color: #fff;
     display: grid;
     grid-template-rows: auto 1fr;
     padding-bottom: 2rem;
@@ -349,6 +352,7 @@ body.dark .switch::before {
     overflow: hidden;
     transition:  0.8s ease-in-out;
     padding-top: 4rem;
+    background-color: #fff;
 }
 
 .images-wrapper {
@@ -436,6 +440,138 @@ body.dark .switch::before {
     border-radius: 1rem;
 }
 
+.about-us {
+    width: 55%;
+    margin-left: 6.6rem;
+}
+
+.h1-about-us {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 4.4rem;
+    margin-top: 4.4rem;
+    margin-bottom: 2.5rem;
+    color: var(--black);
+}
+
+.hr-about-us {
+    width: 40%;
+    background-color: #0072bc;
+    margin-bottom: 2.5rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.text-about-us {
+    font-family: 'Mulish', sans-serif;
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+.inpt-about-us {
+    margin-top: 2.5rem;
+    border: none;
+    width: 35%;
+    padding: 15px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #0072bc;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.inpt-about-us:hover {
+    background-color: #0072bc;
+    opacity: 0.8;
+    transition: all 0.5s ease;
+    color: #fff;
+}
+
+.footer-container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style: none;
+}
+
+.footer {
+    background-color: #0072bc;
+    padding: 70px 0;
+    margin-left: -2.5%;
+    margin-top: 10%;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color:  #F62299;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #fff;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: #fff;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #0072bc;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #fff;
+    background-color: #F62299;
+
+}
+
 @media (max-width: 850px) {
     .box {
         height: auto;
@@ -471,5 +607,17 @@ body.dark .switch::before {
 
     .text-slider {
         width: 100%;
+    }
+
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 574px) {
+    .footer-col {
+        width: 100%;
+
     }
 }

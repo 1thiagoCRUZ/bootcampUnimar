@@ -29,8 +29,7 @@ const images = document.querySelectorAll(".image");
       });
 
 
-function moveSlider() {
-  let index = this.dataset.value;
+function moveSlider(index) {
   let currentImage = document.querySelector(`.img-${index}`);
   images.forEach(img => img.classList.remove("show"));
   currentImage.classList.add("show");
@@ -39,9 +38,29 @@ function moveSlider() {
   textSlider.style.transform = `translateY(${-(index - 1) * 2.2}rem)`;
 
   bullets.forEach(bull => bull.classList.remove("active"));
-  this.classList.add("active");
+  bullets[index - 1].classList.add("active");
 }
 
-bullets.forEach(bullet => {
-  bullet.addEventListener("click", moveSlider);
-})
+let currentIndex = 1;
+
+function autoMoveSlider() {
+  if (currentIndex >= bullets.length) {
+    currentIndex = 1; // Inicia tudo dnv após o ultimo
+  } else {
+    currentIndex++;
+  }
+  moveSlider(currentIndex);
+}
+
+let sliderInterval = setInterval(autoMoveSlider, 5000); // Move a imagem a cada 5s
+
+
+bullets.forEach((bullet, index) => {
+  bullet.addEventListener("click", () => {
+    currentIndex = index + 1;
+    moveSlider(currentIndex);
+  });
+});
+
+
+

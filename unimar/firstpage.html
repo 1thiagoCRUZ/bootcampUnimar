@@ -12,7 +12,7 @@
     <!-- CSS do Swiper -->
     <link rel="stylesheet" href="css/cdn.jsdelivr.net_npm_swiper@10.2.0_swiper-bundle.min.css ">
 
-    <title>Document</title>
+    <title>Biblioteca Digital - Início</title>
 </head>
 <body>
     <nav class="sidebar close">
@@ -145,18 +145,83 @@
     }
 
     .swiper h1 {
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
 
     .swiper h2 {
       font-size: 0.9rem;
       color: gray;
+      text-align: start;
     }
 
+    .detail-box {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 10px;
+      align-items: center;
+      box-sizing: border-box;
+    }
+
+    .type {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .type a {
+      color: #222222;
+      margin: 5px 0;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      padding-right: 8px;
+      text-decoration: none;
+    }
+
+
+    .overlay {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+
+      align-items: center;
+    }
+
+    .buy-btn {
+      width: 160px;
+      height: 40px;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      background-color: #ffffff;
+      color: #003264;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-decoration: none;
+      border-radius: 20px;
+      box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .buy-btn:hover {
+      color: #ffffff;
+      background-color: #f15fa3;
+      transition: all ease 0.3s;
+    }
+
+    .overlay {
+      visibility: hidden;
+    }
+
+    .swiper-slide:hover .overlay {
+      visibility: visible;
+    }
   </style>
 <section class="home">
   <div class="welcome-text">
-    <h3>Seja bem-vindo à nossa Biblioteca Digital</h3>
   </div>
   <!-- Swiper -->
 
@@ -165,9 +230,20 @@
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <img src="img/books-names/book-name1.webp" class="img-slider" alt="">
-        <div>
-          <h1>Titulo</h1>
-          <h2>Descrição</h2>
+        <div class="overlay">
+          <a href="#" class="buy-btn">Mais info</a>
+        </div>
+        <div class="detail-box">
+          <div class="type">
+            <h1>Quarto de Despejo</h1>
+            <h2>Natan Rossi</h2> 
+
+            <!-- COLOCAR OS SEGUINTES LIVROS -->
+            <!-- O Homem mais rico da babilonia -->
+            <!-- Biblia sagrada -->
+            <!-- A seleção: 1 livro -->
+          </div>
+          <h2>Disponível</h2>
         </div>
       </div>
 
@@ -294,9 +370,9 @@
         <div class="text-slider">
           <div class="text-wrap">
             <div class="text-group">
-              <h2>Ler</h2>
-              <h2>é</h2>
-              <h2>um hábito.</h2>
+              <h2>O ato da leitura</h2>
+              <h2>se bem desenvolvido</h2>
+              <h2>torna-se um hábito.</h2>
             </div>
           </div>
 
@@ -310,7 +386,76 @@
     </div>
   </div>
   </center>
+
+  <br>
+
+  <div class="about-us">
+    <h1 class="h1-about-us">Sobre a nossa Biblioteca</h1>
+
+    <hr size="7%"  class="hr-about-us">
+
+    <p class="text-about-us">A Biblioteca Digital da Unimar é uma inovação marcante no panorama acadêmico da Universidade de Mariana (Unimar). Sendo
+    um pilar central na promoção da pesquisa e estudo, essa plataforma online abrange uma extensa e rica gama de recursos,
+    desde e-books até vídeos e conferências. Com mais de 50.000 e-books e 100.000 artigos de revistas acadêmicas, a biblioteca digital é um tesouro inestimável para
+    nossos estudantes, professores e pesquisadores.</p>
+
+    <div>
+      <input type="submit" value="Venha conferir as novidades" class="inpt-about-us"></input>
+    </div>
+  </div>
+
+
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="row">
+
+        <div class="footer-col">
+          <h4>Unimar</h4>
+          <ul>
+            <li><a href="#">Institucional</a></li>
+            <li><a href="#">Bolsas e Programas</a></li>
+            <li><a href="#">Eventos</a></li>
+            <li><a href="#">Vestibular</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Núcleos</h4>
+          <ul>
+            <li><a href="#">Estágio e Empregabilidade</a></li>
+            <li><a href="#">Extensão</a></li>
+            <li><a href="#">Pesquisa</a></li>
+            <li><a href="#">Internacionalização</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Ajuda</h4>
+          <ul>
+            <li><a href="#">Consulta e Diplomas</a></li>
+            <li><a href="#">Identidade Visual</a></li>
+            <li><a href="#">Ouvidoria</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contato</h4>
+          <ul>
+           <div class="social-links">
+             <a href="#"><i class='bx bxl-linkedin'></i></i></a>
+            <a href="#"><i class='bx bxl-github'></i></i></a>
+           </div>
+          </ul>
+        </div>
+
+        
+      </div>
+    </div>
+  </footer>
+  
   </section>
+
 
     
     <script src="js/sidebar.js"></script>
