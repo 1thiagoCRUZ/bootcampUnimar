@@ -100,26 +100,18 @@
 
     <style>
 
-        .swiper-slide {
-          text-align: center;
-          width: 100%;
-          font-size: 18px;
-          background: red;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-        }
     
-        .swiper-slide img {
-          width: 100%;
-          display: block;
-          object-fit: cover;
-        }
+        
     
         .swiper {
-          width: 85%;
-          height: 440px;
+          width: 90%;
+          height: 240px;
           margin: 20px auto;
+        }
+
+        .swiper-slide {
+          background-color: #003264;
+          width: 170px !important;
         }
     
         .swiper-navBtn {
@@ -215,203 +207,32 @@
         .swiper-slide:hover .overlay {
           visibility: visible;
         }
+
+        
       </style>
 
 
+
     <section class="home">
-        
-        <!-- Swiper -->
-      
-        <div class="container-dois">
-            <div class="welcome-text">
-                <h1>Postados Recentemente</h1>
-            </div>
-        <div #swiperRef="" class="swiper mySwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-            </div>
-      
-            <div class="swiper-slide">      
-            </div>
-      
-            <div class="swiper-slide">
-            </div>
-      
-            <div class="swiper-slide">
-            </div>
-
-            
-            <div class="swiper-slide">
-            </div>
-
-            <div class="swiper-slide">
-            </div>
-
-            <div class="swiper-slide">
-            </div>
-      
-            <div class="swiper-slide">      
-            </div>
-      
-            <div class="swiper-slide">
-            </div>
-      
-            <div class="swiper-slide">
-            </div>
+      <div class="container-tres">
+        <div id="root"></div>
+        <div class="sidebar-cart">
+          <div class="head"><p>Meu Carrinho</p></div>
+          <div id="cartItem">Seu carrinho está vazio</div>
+          <div class="foot">
           </div>
-      
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
         </div>
-        </div>
-        <br>
-        <br>
+      </div>
 
-        
-        <!-- Swiper -->
+      <div class="container-dois"></div>
       
-        <div class="container-dois">
-            <div class="welcome-text">
-            <h1>O Melhor da Literatura Brasileira</h1>
-        </div>
-        <div #swiperRef="" class="swiper mySwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-            </div>
-
-            <div class="swiper-slide">
-            </div>
-
-            <div class="swiper-slide">
-            </div>
-
-            <div class="swiper-slide">
-            </div>
-
-            <div class="swiper-slide">
-            </div>
-
-            <div class="swiper-slide">
-            </div>
-
-            <div class="swiper-slide">
-            </div>
-
-            <div class="swiper-slide">
-            </div>
-      
-            <div class="swiper-slide">      
-            </div>
-      
-            <div class="swiper-slide">
-            </div>
-      
-            <div class="swiper-slide">
-            </div>
-          </div>
-      
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
-        </div>
-        </div>
-
-        <br>
-        <br>
-        <!-- Swiper -->
-      
-        <div class="container-dois"> 
-            
-            <div class="welcome-text">
-            <h1>Universitários e Acadêmicos</h1>
-        </div>
-
-        <div #swiperRef="" class="swiper mySwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-            </div>
-      
-            <div class="swiper-slide">      
-            </div>
-      
-            <div class="swiper-slide">
-            </div>
-      
-            <div class="swiper-slide">
-            </div>
-
-            
-            <div class="swiper-slide">
-            </div>
-
-            <div class="swiper-slide">
-            </div>
-
-            <div class="swiper-slide">
-            </div>
-      
-            <div class="swiper-slide">      
-            </div>
-      
-            <div class="swiper-slide">
-            </div>
-      
-            <div class="swiper-slide">
-            </div>
-          </div>
-      
-          <div class="swiper-button-next swiper-navBtn"></div>
-          <div class="swiper-button-prev swiper-navBtn"></div>
-          <div class="swiper-pagination"></div>
-        </div>
-        </div>
-
-        <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 4,
-      centeredSlides: true,
-      spaceBetween: 30,
-      grabCursor: "true",
-      fade: "true",
-      loop: "true",
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-        dynamicBullets: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-
-      breakpoints: {
-        0: {
-          slidesPerView: 1,
-        },
-        520: {
-          slidesPerView: 2,
-        },
-        768: {
-          slidesPerView: 3,
-        },
-        1000: {
-          slidesPerView: 4,
-        },
-      }
-    });
-
-
-  </script>
     </section>      
 
 
 
 
     <script src="js/sidebar.js"></script>
+    <script src="js/addtocart.js"></script>
 </body>
 </html>
